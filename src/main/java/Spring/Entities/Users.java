@@ -1,6 +1,7 @@
 package Spring.Entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 
 @Entity
@@ -10,21 +11,23 @@ import javax.persistence.*;
 
 public class Users {
 
-    @Id
+
     @GeneratedValue
+    @Id
     @Column(name = "id")
     private int id;
 
-    @Column(name = "User Name")
+
+    @Column(name = "User_Name")
     private String userName;
 
     @Column(name = "Password")
     private String password;
 
-    @Column(name = "E-mail")
+    @Column(name = "Email")
     private String email;
 
-    @Column(name = "User Permission Group")
+    @Column(name = "User_Permission_Group")
     private String userPermissionGroup;
 
     //Constructors
@@ -79,4 +82,5 @@ public class Users {
     public void setUserPermissionGroup(String userPermissionGroup) {
         this.userPermissionGroup = userPermissionGroup;
     }
+
 }
