@@ -1,5 +1,6 @@
 package Spring;
 
+import Spring.Entities.Users;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -44,6 +45,7 @@ public class Main extends SpringBootServletInitializer {
                 .select().apis(RequestHandlerSelectors.basePackage("Spring.Controllers"))
                 .build();
     }
+
 
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
