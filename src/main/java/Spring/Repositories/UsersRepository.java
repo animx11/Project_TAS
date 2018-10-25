@@ -20,7 +20,7 @@ public interface UsersRepository extends CrudRepository<Users, Integer>, PagingA
     Iterable<Users> findByPermissionGroup(String userPermissionGroup);
 
     @Query("select u from Users u where u.userName like ?1 and u.password = ?2")
-    Iterable<Users> checkIfExistUserNameWithPassword(String userName, String password);
+    Integer checkIfExistUserNameWithPassword(String userName, String password);
 
 
 }
