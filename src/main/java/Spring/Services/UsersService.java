@@ -10,8 +10,6 @@ public interface UsersService {
 
     Iterable<Users> getByUserName(String userName);
     Iterable<Users> getByPermissionGroup(String userPermissionGroup);
-    Boolean checkIfExist(Integer id);
-    Boolean checkIfExistUserNameWithPassword(String userName, String password);
 
     Iterable<Users> listUsers();
     Iterable<Users> listAllPages(Integer pages, Integer howManyOn);

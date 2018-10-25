@@ -32,25 +32,13 @@ public class UsersServiceImplementation implements UsersService {
 
     @Override
     public Iterable<Users> getByUserName(String userName){
-        return usersRepository.findByUserName(userName);
+        return usersRepository.findByUserName( userName);
     }
 
     @Override
     public Iterable<Users> getByPermissionGroup(String userPermissionGroup){
         return usersRepository.findByPermissionGroup(userPermissionGroup);
     }
-
-    @Override
-    public Boolean checkIfExist(Integer id) {
-        return usersRepository.checkIfExist(id) > 0;
-    }
-
-    @Override
-    public Boolean checkIfExistUserNameWithPassword(String userName, String password) {
-        return usersRepository.checkIfExistUserNameWithPassword(userName, password) > 0;
-    }
-
-
 
     @Override
     public Iterable<Users> listUsers(){
