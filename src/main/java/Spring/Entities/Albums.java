@@ -15,7 +15,15 @@ public class Albums {
 
     @Column(name = "Album_Name")
     private String albumName;
+/*
+    @OneToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "Band", referencedColumnName = "id")
+    private Bands band;
 
+    @OneToMany(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "Songs", referencedColumnName = "id")
+    private Songs songs;
+*/
     @Column(name = "Lenght_Of_Album")
     private int lengthOfAlbum;
 
