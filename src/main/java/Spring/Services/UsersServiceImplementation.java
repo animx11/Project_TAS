@@ -32,7 +32,7 @@ public class UsersServiceImplementation implements UsersService {
 
     @Override
     public Iterable<Users> getByUserName(String userName){
-        return usersRepository.findByUserName( userName);
+        return usersRepository.findByUserName(userName);
     }
 
     @Override
