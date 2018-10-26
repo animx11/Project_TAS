@@ -72,5 +72,4 @@ public class UsersController {
         return usersService.getByPermissionGroup(userPermissionGroup);
     }
 
-
 }
