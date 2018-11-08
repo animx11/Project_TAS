@@ -5,7 +5,7 @@ import java.util.Date;
 
 
 @Entity
-@Table(name = "Albums", uniqueConstraints = {
+@Table(name = "Musicans", uniqueConstraints = {
         @UniqueConstraint(columnNames = {"id"})
 })
 public class Musicians {

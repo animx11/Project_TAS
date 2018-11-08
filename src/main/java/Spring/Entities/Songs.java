@@ -32,6 +32,11 @@ public class Songs {
     @JoinColumn(name = "Albums", referencedColumnName = "id")
     private Albums albums;
 
+
+    @OneToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "Band", referencedColumnName = "id")
+    private Bands band;
+
     public Songs() {
     }
 
@@ -41,7 +46,7 @@ public class Songs {
         this.genre = genre;
         this.lengthOfSong = lengthOfSong;
         this.averangeRateOfSong = averangeRateOfSong;
-        this.albums = albums;
+        //this.albums = albums;
     }
 
     public int getId() {
@@ -102,9 +107,4 @@ public class Songs {
 
 
 
-    /*
-    @OneToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "Band", referencedColumnName = "id")
-    private Bands band;
-    */
 }
