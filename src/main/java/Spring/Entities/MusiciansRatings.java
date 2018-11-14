@@ -3,7 +3,7 @@ package Spring.Entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Albums", uniqueConstraints = {
+@Table(name = "MusicansRating", uniqueConstraints = {
         @UniqueConstraint(columnNames = {"id"})
 })
 public class MusiciansRatings {
