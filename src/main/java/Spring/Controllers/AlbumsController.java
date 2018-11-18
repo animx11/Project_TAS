@@ -20,9 +20,14 @@ public class AlbumsController {
     @Autowired
     private AlbumsService albumsService;
 
+  //  @RequestMapping(value = "/albums", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+  //  public Iterable<Albums> listAlbums(){
+  //     return albumsService.listAlbums();
+ //   }
+
     @RequestMapping(value = "/albums", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<Albums> listAlbums(){
-        return albumsService.listAlbums();
+    public String listAlbums(){
+        return "hello";
     }
 
     @RequestMapping(value = "albums_by_id", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
