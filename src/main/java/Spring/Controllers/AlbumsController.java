@@ -20,15 +20,16 @@ public class AlbumsController {
     @Autowired
     private AlbumsService albumsService;
 
-  //  @RequestMapping(value = "/albums", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-  //  public Iterable<Albums> listAlbums(){
-  //     return albumsService.listAlbums();
- //   }
-
     @RequestMapping(value = "/albums", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public String listAlbums(){
-        return "hello";
+    public Iterable<Albums> listAlbums(){
+        albumsService.save(new Albums("qwer", 34, 4.5f));
+       return albumsService.listAlbums();
     }
+
+    //@RequestMapping(value = "/albums", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    //public String listAlbums(){
+     //   return "hello";
+    //}
 
     @RequestMapping(value = "albums_by_id", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Albums getByParamId(@RequestParam("id") Integer id){
@@ -79,5 +80,11 @@ public class AlbumsController {
     public Iterable<Albums>  getAlbumsWithHigherOrEqualAverangeRate(@RequestParam("averangeRateOfAlbum") float averangeRateOfAlbum){
         return albumsService.getAlbumsWithHigherOrEqualAverangeRate(averangeRateOfAlbum);
     }
+
+    public void Initialize()
+    {
+        albumsService.save(new Albums("asd", 45, 3.4f));
+    }
+
 
 }
