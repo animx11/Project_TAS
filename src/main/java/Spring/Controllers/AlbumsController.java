@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.awt.*;
@@ -22,14 +21,12 @@ public class AlbumsController {
 
     @RequestMapping(value = "/albums", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Albums> listAlbums(){
-        albumsService.save(new Albums("qwer", 34, 4.5f));
+        if(!initialized) {
+            Initialize();
+        }
        return albumsService.listAlbums();
     }
 
-    //@RequestMapping(value = "/albums", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    //public String listAlbums(){
-     //   return "hello";
-    //}
 
     @RequestMapping(value = "albums_by_id", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Albums getByParamId(@RequestParam("id") Integer id){
@@ -81,9 +78,19 @@ public class AlbumsController {
         return albumsService.getAlbumsWithHigherOrEqualAverangeRate(averangeRateOfAlbum);
     }
 
+    private boolean initialized = false;
     public void Initialize()
     {
-        albumsService.save(new Albums("asd", 45, 3.4f));
+        albumsService.save(new Albums("album1", 45, 3.4f));
+        albumsService.save(new Albums("album2", 45, 3.4f));
+        albumsService.save(new Albums("album3", 45, 3.4f));
+        albumsService.save(new Albums("album4", 45, 3.4f));
+        albumsService.save(new Albums("album5", 45, 3.4f));
+        albumsService.save(new Albums("album6", 45, 3.4f));
+        albumsService.save(new Albums("album7", 45, 3.4f));
+        albumsService.save(new Albums("album8", 45, 3.4f));
+        albumsService.save(new Albums("album9", 45, 3.4f));
+        initialized = true;
     }
 
 
