@@ -37,9 +37,12 @@ public class UsersController {
         return usersService.getById(id);
     }
 
-    @RequestMapping(value = "/users", method = RequestMethod.POST)
+    @RequestMapping(value = "/add_user", method = RequestMethod.POST)
     public ResponseEntity<Users> create(@RequestBody @Valid @NotNull Users user){
-        usersService.save(user);
+        if(!usersService.getByUserName(user.getUserName()).iterator().hasNext()){
+            usersService.save(user);
+            return ResponseEntity.ok().body(user);
+        }
         return ResponseEntity.ok().body(user);
     }
 

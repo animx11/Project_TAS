@@ -26,7 +26,10 @@ public class AlbumsServiceImplementation implements AlbumsService {
         albumsRepository.delete(id);
     }
 
-
+    @Override
+    public Iterable<Albums> getAlbumsPaged(int page){
+        return albumsRepository.findAlbumsPaged(page);
+    }
     @Override
     public Iterable<Albums> getByAlbumName(String albumName){
         return albumsRepository.findByAlbumName(albumName);

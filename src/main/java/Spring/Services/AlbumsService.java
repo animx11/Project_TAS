@@ -11,6 +11,7 @@ public interface AlbumsService {
     Iterable<Albums> getByAlbumName(String albumName);
     Iterable<Albums> getAlbumsWithLowerOrEqualAverangeRate(float averangeRateOfAlbum);
     Iterable<Albums> getAlbumsWithHigherOrEqualAverangeRate(float averangeRateOfAlbum);
+    Iterable<Albums> getAlbumsPaged(int page);
 
     Iterable<Albums> listAlbums();
 

@@ -25,6 +25,10 @@ public class Albums {
     @JoinColumn(name = "Songs", referencedColumnName = "id")
     private List<Songs> songs;
 
+    public void setSongs(List<Songs> songs) {
+        this.songs = songs;
+    }
+
     @Column(name = "Lenght_Of_Album")
     private int lengthOfAlbum;
 
