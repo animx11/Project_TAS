@@ -8,8 +8,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class AlbumsServiceImplementation implements AlbumsService {
 
+    private final AlbumsRepository albumsRepository;
+
     @Autowired
-    private AlbumsRepository albumsRepository;
+    public AlbumsServiceImplementation(AlbumsRepository albumsRepository) {
+        this.albumsRepository = albumsRepository;
+    }
 
     @Override
     public Albums getById(Integer id){

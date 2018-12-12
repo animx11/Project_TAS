@@ -10,8 +10,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class UsersServiceImplementation implements UsersService {
 
+    private final UsersRepository usersRepository;
+
     @Autowired
-    private UsersRepository usersRepository;
+    public UsersServiceImplementation(UsersRepository usersRepository) {
+        this.usersRepository = usersRepository;
+    }
 
     @Override
     public Users getById(Integer id){

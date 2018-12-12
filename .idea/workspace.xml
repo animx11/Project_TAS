@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e1bce5b-c064-439a-9b68-2fb021128614" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Spring/Entities/AlbumsComments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Spring/Entities/BandsComments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Spring/Entities/SongsComments.java" afterDir="false" />
+    <list default="true" id="8e1bce5b-c064-439a-9b68-2fb021128614" name="Default" comment="Dodawanie utworów">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Spring/Controllers/SongsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Spring/Repositories/SongsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Spring/Services/SongsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Spring/Services/SongsServiceImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/TAS_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/TAS_war.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/TAS_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/TAS_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
@@ -106,6 +107,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_tukaani_xz_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tukaani_xz_1_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Controllers/AlbumsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Controllers/AlbumsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Entities/AlbumsComments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Entities/AlbumsComments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Entities/BandsComments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Entities/BandsComments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Entities/Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Entities/Songs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Entities/SongsComments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Entities/SongsComments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Repositories/AlbumsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Repositories/AlbumsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Services/AlbumsServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Services/AlbumsServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Services/UsersServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Services/UsersServiceImplementation.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -134,105 +144,26 @@
       <file leaf-file-name="Albums.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Albums.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+            <state relative-caret-position="-620">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlbumsRatings.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/AlbumsRatings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Users.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Users.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1408">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#835#836#0" expanded="true" />
-                <element signature="e#860#861#0" expanded="true" />
-                <element signature="e#893#894#0" expanded="true" />
-                <element signature="e#921#922#0" expanded="true" />
-                <element signature="e#956#957#0" expanded="true" />
-                <element signature="e#987#988#0" expanded="true" />
-                <element signature="e#1035#1036#0" expanded="true" />
-                <element signature="e#1075#1076#0" expanded="true" />
-                <element signature="e#1110#1111#0" expanded="true" />
-                <element signature="e#1141#1142#0" expanded="true" />
-                <element signature="e#1189#1190#0" expanded="true" />
-                <element signature="e#1229#1230#0" expanded="true" />
-                <element signature="e#1261#1262#0" expanded="true" />
-                <element signature="e#1289#1290#0" expanded="true" />
-                <element signature="e#1331#1332#0" expanded="true" />
-                <element signature="e#1365#1366#0" expanded="true" />
-                <element signature="e#1411#1412#0" expanded="true" />
-                <element signature="e#1453#1454#0" expanded="true" />
-                <element signature="e#1523#1524#0" expanded="true" />
-                <element signature="e#1585#1586#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bands.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Bands.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-297">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlbumsComments.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/AlbumsComments.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SongsComments.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/SongsComments.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SongsRatings.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/SongsRatings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BandsComments.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/BandsComments.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1093#1094#0" expanded="true" />
+                <element signature="e#1118#1119#0" expanded="true" />
+                <element signature="e#1151#1152#0" expanded="true" />
+                <element signature="e#1179#1180#0" expanded="true" />
+                <element signature="e#1215#1216#0" expanded="true" />
+                <element signature="e#1247#1248#0" expanded="true" />
+                <element signature="e#1297#1298#0" expanded="true" />
+                <element signature="e#1339#1340#0" expanded="true" />
+                <element signature="e#1376#1377#0" expanded="true" />
+                <element signature="e#1412#1413#0" expanded="true" />
+                <element signature="e#1467#1468#0" expanded="true" />
+                <element signature="e#1517#1518#0" expanded="true" />
+                <element signature="e#1562#1563#0" expanded="true" />
+                <element signature="e#1604#1605#0" expanded="true" />
+                <element signature="e#1673#1674#0" expanded="true" />
+                <element signature="e#1735#1736#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -241,8 +172,102 @@
       <file leaf-file-name="AlbumsRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/AlbumsRepository.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SongsRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/SongsRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SongsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/SongsService.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SongsServiceImplementation.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/SongsServiceImplementation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#425#426#0" expanded="true" />
+                <element signature="e#479#480#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SongsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/SongsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1037">
+              <caret line="67" column="52" lean-forward="true" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#654#655#0" expanded="true" />
+                <element signature="e#702#703#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Songs.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Songs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-306">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bands.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Bands.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MusiciansRatings.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/MusiciansRatings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/UsersRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -260,6 +285,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>@ComponentScan</find>
+      <find>alb</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -279,44 +305,47 @@
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/RecordLabel.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Repositories/RecordLabelRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Services/GenresService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Repositories/AlbumsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Controllers/RecordLableController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Services/SongsServiceImplementation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Services/SongsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Services/BandsServiceImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Services/BandsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Controllers/IndexController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Services/RecordLableServiceImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Services/RecordLabelService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Controllers/AlbumsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Repositories/SongsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Repositories/BandsRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Services/AlbumsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Services/AlbumsServiceImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Repositories/GenresRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Services/GenresServiceImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Controllers/BandsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Controllers/SongsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Controllers/GenresController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Repositories/UsersRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/Bands.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/Musicians.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/BandsRatings.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/MusiciansRatings.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/SongsRatings.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/Albums.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/Songs.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Repositories/CommentRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Repositories/CommentsRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/BandsComments.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/Comments.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/AlbumsComments.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/SongsComments.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/AlbumsRatings.kt" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/AlbumsRatings.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Repositories/UsersRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Services/UsersService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/AlbumsComments.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/BandsComments.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/SongsComments.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/Albums.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Services/AlbumsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Repositories/SongsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Repositories/AlbumsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Services/AlbumsServiceImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Controllers/AlbumsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Controllers/UsersController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Services/UsersServiceImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/Songs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Controllers/SongsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Services/SongsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Services/SongsServiceImplementation.java" />
       </list>
     </option>
   </component>
@@ -346,10 +375,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -589,7 +617,7 @@
       <workItem from="1541667971081" duration="1405000" />
       <workItem from="1544562297768" duration="3703000" />
       <workItem from="1544568573973" duration="3705000" />
-      <workItem from="1544634137382" duration="1806000" />
+      <workItem from="1544634137382" duration="13670000" />
     </task>
     <task id="LOCAL-00001" summary="Adding users entities">
       <created>1540219947025</created>
@@ -619,11 +647,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544636316482</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Klasy komentarzy do utworów, zespołów i albumów">
+      <created>1544636590602</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544636590602</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27356000" />
+    <option name="totallyTimeSpent" value="39220000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -631,7 +666,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.32960895" />
-      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.118336886" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.047441363" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -641,13 +676,13 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.32849163" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32849163" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19553073" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19553073" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32998884" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16897655" />
@@ -676,27 +711,22 @@
     <MESSAGE value="hotfix" />
     <MESSAGE value="Adding UsersRepository" />
     <MESSAGE value="Klasy komentarzy do utworów, zespołów i albumów" />
-    <option name="LAST_COMMIT_MESSAGE" value="Klasy komentarzy do utworów, zespołów i albumów" />
+    <MESSAGE value="Dodawanie utworów" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodawanie utworów" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Genres.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/RecordLabel.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/RecordLabelRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/GenresService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/RecordLableController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/SongsService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/BandsService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/IndexController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/RecordLableServiceImplementation.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/RecordLabelService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/SongsRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/BandsRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/GenresRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/GenresServiceImplementation.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/BandsController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/SongsController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/GenresController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/SongsServiceImplementation.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/BandsServiceImplementation.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor" />
@@ -765,41 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://JAVA/Spring.Entities.Albums">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Spring.Entities.Albums</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">javax.persistence.Entity</node>
-            <node x="98.0" y="0.0">javax.persistence.Table</node>
-            <node x="43.25" y="79.0">Spring.Entities.Albums</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="Spring.Entities.Albums" target="javax.persistence.Entity">
-              <point x="-22.25" y="-14.5" />
-              <point x="65.5" y="54.0" />
-              <point x="39.0" y="54.0" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="Spring.Entities.Albums" target="javax.persistence.Table">
-              <point x="22.25" y="-14.5" />
-              <point x="110.0" y="54.0" />
-              <point x="136.5" y="54.0" />
-              <point x="0.0" y="14.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-342.0" y="-127.0" />
-          <SelectedNodes>
-            <node>Spring.Entities.Albums</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/Spring.Entities.Musicians">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -835,20 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/AlbumsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="63" lean-forward="true" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/AlbumsServiceImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -858,34 +839,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TAS.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/AlbumsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="64" column="55" lean-forward="true" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/UsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="46" column="56" lean-forward="true" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Songs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/MusiciansRatings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="33" lean-forward="true" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/BandsRatings.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -905,20 +858,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/CommentRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/UsersRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/AlbumsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/CommentsRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -939,36 +878,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Albums.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/zx.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/SongsComments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/SongsRatings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        <state relative-caret-position="34">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Users.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1408">
+        <state relative-caret-position="1428">
           <caret line="84" selection-start-line="84" selection-end-line="84" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -996,13 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/zx.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/AlbumsRatings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1010,10 +922,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="uml://JAVA/Spring.Entities.Albums">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Spring.Entities.Albums</OriginalElement>
+          <nodes>
+            <node x="" y="">javax.persistence.Entity</node>
+            <node x="" y="">javax.persistence.Table</node>
+            <node x="" y="">Spring.Entities.Albums</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="87.5" y="54.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/SongsRatings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/AlbumsComments.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="578">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/SongsComments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="40" column="68" selection-start-line="40" selection-start-column="68" selection-end-line="40" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1022,18 +971,189 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/BandsComments.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        <state relative-caret-position="391">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/UsersService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/AlbumsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/AlbumsServiceImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/AlbumsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#982#983#0" expanded="true" />
+            <element signature="e#1030#1031#0" expanded="true" />
+            <element signature="e#1213#1214#0" expanded="true" />
+            <element signature="e#1261#1262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/UsersServiceImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding>
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Bands.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-297">
+        <state relative-caret-position="272">
           <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/MusiciansRatings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Albums.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-620">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1093#1094#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="e#1151#1152#0" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1297#1298#0" expanded="true" />
+            <element signature="e#1339#1340#0" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1467#1468#0" expanded="true" />
+            <element signature="e#1517#1518#0" expanded="true" />
+            <element signature="e#1562#1563#0" expanded="true" />
+            <element signature="e#1604#1605#0" expanded="true" />
+            <element signature="e#1673#1674#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Songs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/AlbumsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/UsersRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/SongsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="67" column="52" lean-forward="true" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/SongsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/SongsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/SongsServiceImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -19,8 +19,12 @@ import java.util.Objects;
 @RequestMapping("/api")
 public class UsersController {
 
+    private final UsersService usersService;
+
     @Autowired
-    private UsersService usersService;
+    public UsersController(UsersService usersService) {
+        this.usersService = usersService;
+    }
 
     @RequestMapping(value = "/users", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Users> listUsers(){

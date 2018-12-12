@@ -17,8 +17,12 @@ import java.util.Objects;
 @RequestMapping("/api")
 public class AlbumsController {
 
+    private final AlbumsService albumsService;
+
     @Autowired
-    private AlbumsService albumsService;
+    public AlbumsController(AlbumsService albumsService) {
+        this.albumsService = albumsService;
+    }
 
     @RequestMapping(value = "/albums", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Albums> listAlbums(){

@@ -38,4 +38,5 @@ public class AlbumsComments {
     public int getId() {return id;}
     public String getContent() {return content;}
     public int getRating() {return rating;}
+    public void setContent(String content) {this.content = content;}
 }
