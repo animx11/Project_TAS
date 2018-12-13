@@ -1,6 +1,5 @@
 package Spring.Controllers;
 
-
 import Spring.Entities.Users;
 import Spring.Services.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +18,8 @@ import java.util.Objects;
 @RequestMapping("/api")
 public class UsersController {
 
-    private final UsersService usersService;
-
     @Autowired
-    public UsersController(UsersService usersService) {
-        this.usersService = usersService;
-    }
+    private UsersService usersService;
 
     @RequestMapping(value = "/users", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Users> listUsers(){

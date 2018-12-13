@@ -9,8 +9,11 @@ public interface SongsRepository extends CrudRepository<Songs, Integer>, PagingA
 
     Songs findById(int id);
 
-    @Query("select a from Songs a where a.songsName like ?1")
-    Iterable<Songs> findBySongName(String songName);
+    @Query("select a from Songs a where a.Title like ?1")
+    Iterable<Songs> findByTitle(String Title);
+
+    @Query("SELECT a FROM Songs a ORDER BY a.averangeRateOfSong DESC")
+    Iterable<Songs> sortSongsByRating();
 
     @Query("select a from Songs a where a.averangeRateOfSong <= ?1")
     Iterable<Songs> findSongsWithLowerOrEqualAverangeRate(float averangeRateOfSong);

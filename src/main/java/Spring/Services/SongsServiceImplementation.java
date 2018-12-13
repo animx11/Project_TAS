@@ -8,12 +8,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class SongsServiceImplementation implements SongsService {
 
-    private final SongsRepository songsRepository;
-
     @Autowired
-    public SongsServiceImplementation(SongsRepository songsRepository) {
-        this.songsRepository = songsRepository;
-    }
+    private SongsRepository songsRepository;
 
     @Override
     public Songs getById(Integer id){
@@ -30,10 +26,12 @@ public class SongsServiceImplementation implements SongsService {
         songsRepository.delete(id);
     }
 
+    @Override
+    public Iterable<Songs> sortSongsByRating() {return songsRepository.sortSongsByRating();}
 
     @Override
-    public Iterable<Songs> getBySongsName(String songsName){
-        return songsRepository.findBySongName(songsName);
+    public Iterable<Songs> getByTitle(String title){
+        return songsRepository.findByTitle(title);
     }
 
     @Override

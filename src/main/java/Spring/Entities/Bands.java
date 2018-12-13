@@ -1,5 +1,6 @@
 package Spring.Entities;
 
+import java.util.List;
 import javax.persistence.*;
 
 
@@ -17,6 +18,10 @@ public class Bands {
     @Column(name = "Name")
     private String name;
 
+    @OneToMany(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "Albums", referencedColumnName = "id")
+    private List<Albums> albums;
+
     @Column(name = "Year_of_creation")
     private int yearOfCreation;
 
@@ -24,7 +29,7 @@ public class Bands {
     private String origin;
 
     @Column(name = "Average_Rate_Of_Band")
-    private float averageRateOfBand;
+    private float averangeRateOfBand;
 
     public Bands() {
     }
@@ -33,7 +38,7 @@ public class Bands {
         this.name = name;
         this.yearOfCreation = yearOfCreation;
         this.origin = origin;
-        this.averageRateOfBand = averangeRateOfBand;
+        this.averangeRateOfBand = averangeRateOfBand;
     }
 
     public int getId() {
@@ -69,11 +74,11 @@ public class Bands {
     }
 
     public float getAverangeRateOfBand() {
-        return averageRateOfBand;
+        return averangeRateOfBand;
     }
 
     public void setAverangeRateOfBand(float averangeRateOfBand) {
-        this.averageRateOfBand = averangeRateOfBand;
+        this.averangeRateOfBand = averangeRateOfBand;
     }
 
 

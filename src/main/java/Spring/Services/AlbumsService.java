@@ -9,6 +9,7 @@ public interface AlbumsService {
     void delete(Integer id);
 
     Iterable<Albums> getByAlbumName(String albumName);
+    Iterable<Albums> sortAlbumsByRating();
     Iterable<Albums> getAlbumsWithLowerOrEqualAverangeRate(float averangeRateOfAlbum);
     Iterable<Albums> getAlbumsWithHigherOrEqualAverangeRate(float averangeRateOfAlbum);
 

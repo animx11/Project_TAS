@@ -3,26 +3,23 @@ package Spring.Controllers;
 import Spring.Entities.Songs;
 import Spring.Services.SongsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.jws.soap.SOAPBinding;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.awt.*;
 import java.util.Objects;
 
 @RestController
 @RequestMapping("/api")
 public class SongsController {
 
-    private final SongsService songsService;
-
     @Autowired
-    public SongsController(SongsService songsService) {
-        this.songsService = songsService;
-    }
+    private SongsService songsService;
 
     @RequestMapping(value = "/songs", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Songs> listSongs(){
@@ -66,7 +63,11 @@ public class SongsController {
 
     @RequestMapping(value = "/songs_by_songName", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Songs> getBySongName(@RequestParam("songsName") String songName){
-        return songsService.getBySongsName(songName);
+        return songsService.getByTitle(songName);
+    }
+
+    @RequestMapping(value = "/songs_by_rating", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<Songs> sortSongsByRating(){ return songsService.sortSongsByRating();
     }
 
     @RequestMapping(value = "/songs_LOEAverangeRate", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)

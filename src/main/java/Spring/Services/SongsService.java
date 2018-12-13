@@ -5,10 +5,11 @@ import Spring.Entities.Songs;
 public interface SongsService {
 
     Songs getById(Integer id);
-    Songs save(Songs song);
+    Songs save(Songs album);
     void delete(Integer id);
 
-    Iterable<Songs> getBySongsName(String songName);
+    Iterable<Songs> getByTitle(String title);
+    Iterable<Songs> sortSongsByRating();
     Iterable<Songs> getSongsWithLowerOrEqualAverangeRate(float averangeRateOfSongs);
     Iterable<Songs> getSongsWithHigherOrEqualAverangeRate(float averangeRateOfSongs);
 

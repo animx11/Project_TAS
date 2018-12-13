@@ -8,12 +8,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class AlbumsServiceImplementation implements AlbumsService {
 
-    private final AlbumsRepository albumsRepository;
-
     @Autowired
-    public AlbumsServiceImplementation(AlbumsRepository albumsRepository) {
-        this.albumsRepository = albumsRepository;
-    }
+    private AlbumsRepository albumsRepository;
 
     @Override
     public Albums getById(Integer id){
@@ -32,9 +28,11 @@ public class AlbumsServiceImplementation implements AlbumsService {
 
 
     @Override
-    public Iterable<Albums> getByAlbumName(String albumName){
-        return albumsRepository.findByAlbumName(albumName);
+    public Iterable<Albums> getByAlbumName(String albumName){ return albumsRepository.findByAlbumName(albumName);
     }
+
+    @Override
+    public Iterable<Albums> sortAlbumsByRating() {return albumsRepository.sortAlbumsByRating();}
 
     @Override
     public Iterable<Albums> getAlbumsWithLowerOrEqualAverangeRate(float averangeRateOfAlbum){
