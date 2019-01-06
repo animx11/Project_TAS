@@ -16,6 +16,9 @@ public interface UsersRepository extends CrudRepository<Users, Integer>, PagingA
     @Query("select u from Users u where u.userPermissionGroup like ?1")
     Iterable<Users> findByPermissionGroup(String userPermissionGroup);
 
+    @Query("select password from Users u where u.userName like ?1")
+    String findPasswordByUserName(String userName);
+
 
 
 }

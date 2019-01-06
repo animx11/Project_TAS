@@ -10,6 +10,7 @@ public interface UsersService {
 
     Iterable<Users> getByUserName(String userName);
     Iterable<Users> getByPermissionGroup(String userPermissionGroup);
+    String getPasswordByUserName(String userName);
 
     Iterable<Users> listUsers();
     Iterable<Users> listAllPages(Integer pages, Integer howManyOn);

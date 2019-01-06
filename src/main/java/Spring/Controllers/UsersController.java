@@ -1,16 +1,15 @@
 package Spring.Controllers;
 
 
+import Spring.Cipher.EncrypterAES;
 import Spring.Entities.Users;
 import Spring.Services.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.jws.soap.SOAPBinding;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
@@ -21,6 +20,8 @@ public class UsersController {
 
     @Autowired
     private UsersService usersService;
+
+    private EncrypterAES encrypterAES = new EncrypterAES();
 
     @RequestMapping(value = "/users", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Users> listUsers(){
@@ -39,8 +40,14 @@ public class UsersController {
 
     @RequestMapping(value = "/users", method = RequestMethod.POST)
     public ResponseEntity<Users> create(@RequestBody @Valid @NotNull Users user){
+
+        String passwordToEncrypt = user.getPassword();
+        user.setPassword(encrypterAES.encrypt(passwordToEncrypt));
+
         usersService.save(user);
+
         return ResponseEntity.ok().body(user);
+
     }
 
     @RequestMapping(value = "/users", method = RequestMethod.PUT)
@@ -65,6 +72,20 @@ public class UsersController {
     @RequestMapping(value = "/users_by_userName", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Users> getByUserName(@RequestParam("userName") String userName){
         return usersService.getByUserName(userName);
+    }
+
+    @RequestMapping(value = "/logginUser", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Users> loggin(@RequestParam("userName") String userName, @RequestParam("userPassword") String userPassword){
+
+        userPassword = encrypterAES.encrypt(userPassword);
+
+        if(userPassword.equals(usersService.getPasswordByUserName(userName))){
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
+        }
+
     }
 
     @RequestMapping(value = "/users_by_userPermissionGroup", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)

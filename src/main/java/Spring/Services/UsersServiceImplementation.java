@@ -41,6 +41,11 @@ public class UsersServiceImplementation implements UsersService {
     }
 
     @Override
+    public String getPasswordByUserName(String userName){
+        return usersRepository.findPasswordByUserName(userName);
+    }
+
+    @Override
     public Iterable<Users> listUsers(){
         return usersRepository.findAll();
     }
