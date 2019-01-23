@@ -21,7 +21,7 @@ public class BandsRatings {
 
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "Users", referencedColumnName = "id")
-    private Users user;
+    private Users userName;
 
     @Column(name = "Rating")
     private int rating;
@@ -29,9 +29,10 @@ public class BandsRatings {
     public BandsRatings() {
     }
 
-    public BandsRatings(Bands bands, int rating) {
+    public BandsRatings(Bands bands, int rating, Users userName) {
         this.bands = bands;
         this.rating = rating;
+        this.userName = userName;
     }
 
     public int getId() {
@@ -42,7 +43,7 @@ public class BandsRatings {
         this.id = id;
     }
 
-    public Users getUser() {return user;}
+    public Users getUser() {return userName;}
 
     public Bands getBands() {
         return bands;

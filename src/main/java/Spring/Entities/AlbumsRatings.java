@@ -27,9 +27,10 @@ public class AlbumsRatings {
     public AlbumsRatings() {
     }
 
-    public AlbumsRatings(Albums album, int rating) {
+    public AlbumsRatings(Albums album, int rating, Users user) {
         this.album = album;
         this.rating = rating;
+        this.user = user;
     }
 
     public int getId() {

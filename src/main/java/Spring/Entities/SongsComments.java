@@ -30,9 +30,11 @@ public class SongsComments{
     public SongsComments() {
     }
 
-    public SongsComments(String content, int rating) {
+    public SongsComments(String content, int rating, Users userName, Songs songs) {
         this.content = content;
         this.rating = rating;
+        this.userName = userName;
+        this.songs = songs;
     }
 
     public int getId() {return id;}
