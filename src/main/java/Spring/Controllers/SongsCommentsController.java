@@ -20,6 +20,11 @@ public class SongsCommentsController {
     @Autowired
     private SongsCommentsService songsCommentsService;
 
+    @RequestMapping(value = "/songscomments", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<SongsComments> listSongsComments(){
+        return songsCommentsService.listSongsComments();
+    }
+
     @RequestMapping(value = "/songscomments", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<SongsComments> create(@RequestBody @Valid @NotNull SongsComments songComment){
         songsCommentsService.save(songComment);
@@ -30,5 +35,11 @@ public class SongsCommentsController {
     public ResponseEntity<SongsComments> delete(@PathVariable Integer id){
         songsCommentsService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+    @RequestMapping(value = "/songscomments_by_date", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<SongsComments> sortSongsCommentsByDate(){ return songsCommentsService.sortSongsCommentsByDate();
+    }
+    @RequestMapping(value = "/songscomments_by_rating", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<SongsComments> sortSongsCommentsByRating(){ return songsCommentsService.sortSongsCommentsByRating();
     }
 }

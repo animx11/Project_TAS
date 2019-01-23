@@ -20,4 +20,16 @@ public class AlbumsCommentsServiceImplementation implements AlbumsCommentsServic
     public void delete(Integer id){
         AlbumsCommentsRepository.delete(id);
     }
+
+    @Override
+    public Iterable<AlbumsComments> listAlbumsComments(){
+        return AlbumsCommentsRepository.findAll();
+    }
+
+    @Override
+    public Iterable<AlbumsComments> sortAlbumsCommentsByDate() {return AlbumsCommentsRepository.sortAlbumsCommentsByDate();}
+
+    @Override
+    public Iterable<AlbumsComments> sortAlbumsCommentsByRating() {return AlbumsCommentsRepository.sortAlbumsCommentsByRating();}
+
 }

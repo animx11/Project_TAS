@@ -20,4 +20,15 @@ public class SongsCommentsServiceImplementation implements SongsCommentsService 
     public void delete(Integer id){
         SongsCommentsRepository.delete(id);
     }
+
+    @Override
+    public Iterable<SongsComments> listSongsComments(){
+        return SongsCommentsRepository.findAll();
+    }
+
+    @Override
+    public Iterable<SongsComments> sortSongsCommentsByDate() {return SongsCommentsRepository.sortSongsCommentsByDate();}
+
+    @Override
+    public Iterable<SongsComments> sortSongsCommentsByRating() {return SongsCommentsRepository.sortSongsCommentsByRating();}
 }

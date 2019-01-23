@@ -22,6 +22,11 @@ public class BandsCommentsController {
     @Autowired
     private BandsCommentsService bandsCommentsService;
 
+    @RequestMapping(value = "/bandscomments", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<BandsComments> listBandsComments(){
+        return bandsCommentsService.listBandsComments();
+    }
+
     @RequestMapping(value = "/bandscomments", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<BandsComments> create(@RequestBody @Valid @NotNull BandsComments bandComment){
         bandsCommentsService.save(bandComment);
@@ -33,4 +38,11 @@ public class BandsCommentsController {
         bandsCommentsService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+    @RequestMapping(value = "/bandscomments_by_date", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<BandsComments> sortBandsCommentsByDate(){ return bandsCommentsService.sortBandsCommentsByDate();
+    }
+    @RequestMapping(value = "/bandscomments_by_rating", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<BandsComments> sortBandsCommentsByRating(){ return bandsCommentsService.sortBandsCommentsByRating();
+    }
+
 }

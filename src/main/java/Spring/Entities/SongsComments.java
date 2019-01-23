@@ -1,6 +1,7 @@
 package Spring.Entities;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -27,6 +28,9 @@ public class SongsComments{
     @JoinColumn(name = "Songs", referencedColumnName = "id")
     private Songs songs;
 
+    @Column(name = "date")
+    private Date commentsDate = new Date();
+
     public SongsComments() {
     }
 
@@ -35,10 +39,12 @@ public class SongsComments{
         this.rating = rating;
         this.userName = userName;
         this.songs = songs;
+        this.commentsDate = new Date();
     }
 
     public int getId() {return id;}
     public String getContent() {return content;}
     public int getRating() {return rating;}
+    public Date getDate() {return commentsDate;}
     public void setContent(String content) {this.content = content;}
 }

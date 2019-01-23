@@ -20,4 +20,15 @@ public class BandsCommentsServiceImplementation implements BandsCommentsService{
     public void delete(Integer id){
         BandsCommentsRepository.delete(id);
     }
+
+    @Override
+    public Iterable<BandsComments> listBandsComments(){
+        return BandsCommentsRepository.findAll();
+    }
+
+    @Override
+    public Iterable<BandsComments> sortBandsCommentsByDate() {return BandsCommentsRepository.sortBandsCommentsByDate();}
+
+    @Override
+    public Iterable<BandsComments> sortBandsCommentsByRating() {return BandsCommentsRepository.sortBandsCommentsByRating();}
 }
