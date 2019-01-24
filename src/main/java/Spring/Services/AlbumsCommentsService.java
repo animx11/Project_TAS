@@ -9,6 +9,9 @@ public interface AlbumsCommentsService {
     Iterable<AlbumsComments> listAlbumsComments();
     Iterable<AlbumsComments> sortAlbumsCommentsByDate();
     Iterable<AlbumsComments> sortAlbumsCommentsByRating();
+    Iterable<AlbumsComments> upvoteAlbumComment(Integer id);
+    Iterable<AlbumsComments> downvoteAlbumComment(Integer id);
+
 
 
 }

@@ -35,8 +35,7 @@ public class SongsCommentsController {
     public ResponseEntity<SongsComments> delete(@PathVariable Integer id){
         songsCommentsService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
-    }
-    @RequestMapping(value = "/songscomments_by_date", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    }@RequestMapping(value = "/songscomments_by_date", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<SongsComments> sortSongsCommentsByDate(){ return songsCommentsService.sortSongsCommentsByDate();
     }
     @RequestMapping(value = "/songscomments_by_rating", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)

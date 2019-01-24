@@ -32,4 +32,9 @@ public class AlbumsCommentsServiceImplementation implements AlbumsCommentsServic
     @Override
     public Iterable<AlbumsComments> sortAlbumsCommentsByRating() {return AlbumsCommentsRepository.sortAlbumsCommentsByRating();}
 
-}
+    @Override
+    public Iterable<AlbumsComments> upvoteAlbumComment(Integer id) {return AlbumsCommentsRepository.upvoteAlbumComment(id);}
+
+    @Override
+    public Iterable<AlbumsComments> downvoteAlbumComment(Integer id) {return AlbumsCommentsRepository.downvoteAlbumComment(id);}
+ }

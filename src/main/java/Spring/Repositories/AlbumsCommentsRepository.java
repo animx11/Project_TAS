@@ -11,5 +11,9 @@ public interface AlbumsCommentsRepository extends CrudRepository<AlbumsComments,
     Iterable<AlbumsComments> sortAlbumsCommentsByDate();
     @Query("SELECT a FROM AlbumsComments a ORDER BY a.rating DESC")
     Iterable<AlbumsComments> sortAlbumsCommentsByRating();
+    @Query("UPDATE AlbumsComments a SET a.rating = a.rating + 1")
+    Iterable<AlbumsComments> upvoteAlbumComment(int id);
+    @Query("UPDATE AlbumsComments a SET a.rating = a.rating - 1")
+    Iterable<AlbumsComments> downvoteAlbumComment(int id);
 
 }

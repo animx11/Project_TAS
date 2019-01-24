@@ -43,4 +43,10 @@ public class AlbumsCommentsController {
     @RequestMapping(value = "/albumscomments_by_rating", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<AlbumsComments> sortAlbumsCommentsByRating(){ return albumsCommentsService.sortAlbumsCommentsByRating();
     }
+    @RequestMapping(value = "/albumcommentupvote", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<AlbumsComments> upvoteAlbumComment(@RequestParam("id") Integer id){return albumsCommentsService.upvoteAlbumComment(id);
+    }
+    @RequestMapping(value = "/albumcommentdownvote", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<AlbumsComments> downvoteAlbumComment(@RequestParam("id") Integer id){return albumsCommentsService.downvoteAlbumComment(id);
+    }
 }
