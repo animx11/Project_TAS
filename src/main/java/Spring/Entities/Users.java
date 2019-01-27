@@ -18,13 +18,13 @@ public class Users {
     private int id;
 
 
-    @Column(name = "User_Name")
+    @Column(name = "User_Name", unique = true)
     private String userName;
 
     @Column(name = "Password")
     private String password;
 
-    @Column(name = "Email")
+    @Column(name = "Email", unique = true)
     private String email;
 
     @Column(name = "User_Permission_Group")
@@ -35,10 +35,11 @@ public class Users {
     public Users() {
     }
 
-    public Users(String userName, String password, String email) {
+    public Users(String userName, String password, String email, String userPermissionGroup) {
         this.userName = userName;
         this.password = password;
         this.email = email;
+        this.userPermissionGroup = userPermissionGroup;
     }
 
     //Getters and Setters

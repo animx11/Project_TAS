@@ -128,8 +128,6 @@
         </plugins>
     </build>
 
-    <!-- Add Spring repositories -->
-    <!-- (you don't need this if you are using a .RELEASE version) -->
     <repositories>
         <repository>
             <id>spring-snapshots</id>

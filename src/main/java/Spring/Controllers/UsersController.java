@@ -16,6 +16,7 @@ import java.util.Objects;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:4200")
 public class UsersController {
 
     @Autowired
@@ -41,13 +42,45 @@ public class UsersController {
     @RequestMapping(value = "/users", method = RequestMethod.POST)
     public ResponseEntity<Users> create(@RequestBody @Valid @NotNull Users user){
 
-        String passwordToEncrypt = user.getPassword();
-        user.setPassword(encrypterAES.encrypt(passwordToEncrypt));
+            String passwordToEncrypt = user.getPassword();
+            char email[] = user.getEmail().toCharArray();
+            boolean isAtInEmail = false;
+            boolean isDomainCorrect = false;
 
-        usersService.save(user);
+            for(int i = 0; i < email.length; i++){
+                if(isAtInEmail == false) {
+                    if (email[i] == '@') {
+                        isAtInEmail = true;
+                    }
+                }
+                else{
+                    if(isDomainCorrect == false){
+                        if(email[i] == '.'){
+                            if(email.length - i > 4){
+                                i = email.length;
+                            }
+                            else{
+                                isDomainCorrect = true;
+                                i = email.length;
+                            }
+                        }
+                    }
+                }
+            }
 
-        return ResponseEntity.ok().body(user);
+            if(isAtInEmail != true || isDomainCorrect != true) {
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
 
+            if(usersService.getByUserEmail(user.getEmail()) != null ){
+                return new ResponseEntity<>(HttpStatus.CONFLICT);
+            }
+
+            user.setPassword(encrypterAES.encrypt(passwordToEncrypt));
+
+            usersService.save(user);
+
+            return ResponseEntity.ok().body(user);
     }
 
     @RequestMapping(value = "/users", method = RequestMethod.PUT)
@@ -74,16 +107,16 @@ public class UsersController {
         return usersService.getByUserName(userName);
     }
 
-    @RequestMapping(value = "/logginUser", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Users> loggin(@RequestParam("userName") String userName, @RequestParam("userPassword") String userPassword){
+    @RequestMapping(value = "/loginUser", method = RequestMethod.GET)
+    public boolean login(@RequestParam("userName") String userName, @RequestParam("userPassword") String userPassword){
 
         userPassword = encrypterAES.encrypt(userPassword);
 
         if(userPassword.equals(usersService.getPasswordByUserName(userName))){
-            return new ResponseEntity<>(HttpStatus.OK);
+            return true;
         }
         else{
-            return new ResponseEntity<>(HttpStatus.CONFLICT);
+            return false;
         }
 
     }

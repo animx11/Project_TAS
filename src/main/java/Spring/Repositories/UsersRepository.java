@@ -19,6 +19,9 @@ public interface UsersRepository extends CrudRepository<Users, Integer>, PagingA
     @Query("select password from Users u where u.userName like ?1")
     String findPasswordByUserName(String userName);
 
+    @Query("select email from Users u where u.email like ?1")
+    String findByUserEmail(String email);
+
 
 
 }

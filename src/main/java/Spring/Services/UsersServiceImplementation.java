@@ -36,6 +36,11 @@ public class UsersServiceImplementation implements UsersService {
     }
 
     @Override
+    public String getByUserEmail(String email){
+        return usersRepository.findByUserEmail(email);
+    }
+
+    @Override
     public Iterable<Users> getByPermissionGroup(String userPermissionGroup){
         return usersRepository.findByPermissionGroup(userPermissionGroup);
     }
