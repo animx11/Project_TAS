@@ -13,8 +13,8 @@ public class Songs {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "Title")
-    private String Title;
+    @Column(name = "Song_Name")
+    private String songName;
 
     @Column(name = "Year_of_creation")
     private int yearOfCreation;
@@ -40,8 +40,8 @@ public class Songs {
     public Songs() {
     }
 
-    public Songs(String title, int yearOfCreation, String genre, int lengthOfSong, float averangeRateOfSong, Albums albums) {
-        Title = title;
+    public Songs(String songName, int yearOfCreation, String genre, int lengthOfSong, float averangeRateOfSong, Albums albums) {
+        this.songName = songName;
         this.yearOfCreation = yearOfCreation;
         this.genre = genre;
         this.lengthOfSong = lengthOfSong;
@@ -57,12 +57,12 @@ public class Songs {
         this.id = id;
     }
 
-    public String getTitle() {
-        return Title;
+    public String getSongName() {
+        return songName;
     }
 
-    public void setTitle(String title) {
-        Title = title;
+    public void setSongName(String songName) {
+        this.songName = songName;
     }
 
     public int getYearOfCreation() {

@@ -7,6 +7,8 @@ public interface SongsService {
     Songs getById(Integer id);
     Songs save(Songs song);
     void delete(Integer id);
+
+    Iterable<Songs> getBySongName(String songName);
     Iterable<Songs> listSongs();
 
 

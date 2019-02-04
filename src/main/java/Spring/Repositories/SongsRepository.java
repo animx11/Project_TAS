@@ -9,8 +9,8 @@ public interface SongsRepository extends CrudRepository<Songs, Integer>, PagingA
 
     Songs findById(int id);
 
-    @Query("select a from Songs a where a.Title like ?1")
-    Iterable<Songs> findBySongName(String Title);
+    @Query("select a from Songs a where a.songName like ?1")
+    Iterable<Songs> findBySongName(String songname);
 
 
 

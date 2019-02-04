@@ -31,5 +31,10 @@ public class SongsServiceImplementation implements SongsService {
         return SongsRepository.findAll();
     }
 
+    @Override
+    public Iterable<Songs> getBySongName(String songName){
+        return SongsRepository.findBySongName(songName);
+    }
+
 
 }
