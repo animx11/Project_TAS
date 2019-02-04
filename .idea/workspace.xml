@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c08fb4d-9d85-493e-b044-9136c2c5792f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ProjectTAS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0c08fb4d-9d85-493e-b044-9136c2c5792f" name="Default Changelist" comment="Manual merge with 1z2x branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Entities/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Entities/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Repositories/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Repositories/UsersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Services/UsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Services/UsersServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Services/UsersServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Controllers/AlbumsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Controllers/AlbumsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Spring/Entities/Albums.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Spring/Entities/Albums.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +28,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/UsersRepository.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -48,17 +41,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Users.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
+            <state relative-caret-position="510">
               <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/UsersController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-355">
-              <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+            <state relative-caret-position="1056">
+              <caret line="99" column="33" lean-forward="true" selection-start-line="99" selection-start-column="33" selection-end-line="99" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -66,7 +59,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Cipher/EncrypterAES.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
+            <state relative-caret-position="85">
               <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -78,8 +71,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Albums.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="366">
+              <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+              <folding>
+                <element signature="e#1782#1783#0" expanded="true" />
+                <element signature="e#1816#1817#0" expanded="true" />
+                <element signature="e#1851#1852#0" expanded="true" />
+                <element signature="e#1879#1880#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/AlbumsServiceImplementation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="136">
               <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -119,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/AlbumsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="23" column="38" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="38" />
+            <state relative-caret-position="323">
+              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,7 +179,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Spring/Controllers/IndexController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Services/RecordLableServiceImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Services/RecordLabelService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Controllers/AlbumsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Repositories/SongsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Repositories/BandsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Services/AlbumsServiceImplementation.java" />
@@ -196,7 +194,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/BandsRatings.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/MusiciansRatings.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/SongsRatings.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/Albums.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/Songs.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Cipher/KeyGen.java" />
@@ -211,6 +208,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Spring/Controllers/UsersController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/Users.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Entities/Albums.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Spring/Controllers/AlbumsController.java" />
       </list>
     </option>
   </component>
@@ -241,7 +240,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -325,6 +323,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -337,6 +336,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547604679665" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nzx1/pom.xml" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -491,6 +491,8 @@
       <workItem from="1548200419773" duration="5869000" />
       <workItem from="1548249502707" duration="7194000" />
       <workItem from="1548321487080" duration="1800000" />
+      <workItem from="1548624758163" duration="348000" />
+      <workItem from="1549243287930" duration="2923000" />
     </task>
     <task id="LOCAL-00001" summary="Adding users entities">
       <created>1540219947025</created>
@@ -513,16 +515,23 @@
       <option name="project" value="LOCAL" />
       <updated>1540347395564</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adding sign up and sign in">
+      <created>1548624978524</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1548624978524</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47754000" />
+    <option name="totallyTimeSpent" value="51025000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.22692889" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.23373677" />
       <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.24281392" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -541,7 +550,7 @@
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32998884" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32569557" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32569557" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49848714" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
@@ -604,7 +613,9 @@
     <MESSAGE value="Adding users entities" />
     <MESSAGE value="hotfix" />
     <MESSAGE value="Adding UsersRepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding UsersRepository" />
+    <MESSAGE value="Adding sign up and sign in" />
+    <MESSAGE value="Manual merge with 1z2x branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Manual merge with 1z2x branch" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resource.properties" />
@@ -711,17 +722,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Albums.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/UsersRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="323">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/AlbumsRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Users.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="62" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="62" />
+        <state relative-caret-position="510">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Cipher/EncrypterAES.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -737,37 +755,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Services/AlbumsServiceImplementation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="136">
           <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#611#612#0" expanded="true" />
             <element signature="e#654#655#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/AlbumsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/UsersRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -778,20 +772,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Cipher/EncrypterAES.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Repositories/AlbumsRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="187">
+          <caret line="11" column="62" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Entities/Albums.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+          <folding>
+            <element signature="e#1782#1783#0" expanded="true" />
+            <element signature="e#1816#1817#0" expanded="true" />
+            <element signature="e#1851#1852#0" expanded="true" />
+            <element signature="e#1879#1880#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/UsersController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-355">
-          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        <state relative-caret-position="1056">
+          <caret line="99" column="33" lean-forward="true" selection-start-line="99" selection-start-column="33" selection-end-line="99" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Spring/Controllers/AlbumsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

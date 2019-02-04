@@ -76,4 +76,11 @@ public class Albums {
     public void setAverangeRateOfAlbum(float averangeRateOfAlbum) {
         this.averangeRateOfAlbum = averangeRateOfAlbum;
     }
+
+    public void setSongs(List<Songs> songs) {
+        this.songs = songs;
+    }
+    public List<Songs> getSongs(){
+        return songs;
+    }
 }

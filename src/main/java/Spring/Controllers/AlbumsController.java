@@ -36,9 +36,13 @@ public class AlbumsController {
     }
 
     @RequestMapping(value = "/albums", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Albums> create(@RequestBody @Valid @NotNull Albums album){
-        albumsService.save(album);
-        return ResponseEntity.ok().body(album);
+    public ResponseEntity<Albums> create(@RequestBody @Valid @NotNull Albums album) {
+        if (!albumsService.getByAlbumName(album.getAlbumName()).iterator().hasNext()) {
+            albumsService.save(album);
+            return ResponseEntity.ok().body(album);
+        } else {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(null);
+        }
     }
 
     @RequestMapping(value = "/albums", method = RequestMethod.PUT)
