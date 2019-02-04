@@ -15,7 +15,7 @@ public class Bands {
     private int id;
 
     @Column(name = "Name")
-    private String name;
+    private String bandName;
 
     @Column(name = "Year_of_creation")
     private int yearOfCreation;
@@ -29,8 +29,8 @@ public class Bands {
     public Bands() {
     }
 
-    public Bands(String name, int yearOfCreation, String origin, float averangeRateOfBand) {
-        this.name = name;
+    public Bands(String bandName, int yearOfCreation, String origin, float averangeRateOfBand) {
+        this.bandName = bandName;
         this.yearOfCreation = yearOfCreation;
         this.origin = origin;
         this.averageRateOfBand = averangeRateOfBand;
@@ -44,12 +44,12 @@ public class Bands {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getBandName() {
+        return bandName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String bandName) {
+        this.bandName = bandName;
     }
 
     public int getYearOfCreation() {

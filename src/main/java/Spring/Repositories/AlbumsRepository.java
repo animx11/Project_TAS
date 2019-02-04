@@ -12,11 +12,11 @@ public interface AlbumsRepository extends CrudRepository<Albums, Integer>, Pagin
     @Query("select a from Albums a where a.albumName like ?1")
     Iterable<Albums> findByAlbumName(String albumName);
 
-    @Query("select a from Albums a where a.averangeRateOfAlbum <= ?1")
-    Iterable<Albums> findAlbumsWithLowerOrEqualAverangeRate(float averangeRateOfAlbum);
+    @Query("select a from Albums a where a.averageRateOfAlbum <= ?1")
+    Iterable<Albums> findAlbumsWithLowerOrEqualAverageRate(float averageRateOfAlbum);
 
-    @Query("select a from Albums a where a.averangeRateOfAlbum >= ?1")
-    Iterable<Albums> findAlbumsWithHigherOrEqualAverangeRate(float averangeRateOfAlbum);
+    @Query("select a from Albums a where a.averageRateOfAlbum >= ?1")
+    Iterable<Albums> findAlbumsWithHigherOrEqualAverageRate(float averageRateOfAlbum);
     /*
     @Query("select a from Albums a where a.Band like ?1")
     Iterable<Albums> findByBandName(String bandName);

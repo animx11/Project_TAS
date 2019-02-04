@@ -1,4 +1,4 @@
-package Spring.Services;
+package Spring.Services.AlbumsServices;
 
 import Spring.Entities.Albums;
 
@@ -9,8 +9,8 @@ public interface AlbumsService {
     void delete(Integer id);
 
     Iterable<Albums> getByAlbumName(String albumName);
-    Iterable<Albums> getAlbumsWithLowerOrEqualAverangeRate(float averangeRateOfAlbum);
-    Iterable<Albums> getAlbumsWithHigherOrEqualAverangeRate(float averangeRateOfAlbum);
+    Iterable<Albums> getAlbumsWithLowerOrEqualAverageRate(float averageRateOfAlbum);
+    Iterable<Albums> getAlbumsWithHigherOrEqualAverageRate(float averageRateOfAlbum);
 
     Iterable<Albums> listAlbums();
 

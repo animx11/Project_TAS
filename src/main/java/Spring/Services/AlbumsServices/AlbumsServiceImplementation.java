@@ -1,7 +1,8 @@
-package Spring.Services;
+package Spring.Services.AlbumsServices;
 
 import Spring.Entities.Albums;
 import Spring.Repositories.AlbumsRepository;
+import Spring.Services.AlbumsServices.AlbumsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,13 +34,13 @@ public class AlbumsServiceImplementation implements AlbumsService {
     }
 
     @Override
-    public Iterable<Albums> getAlbumsWithLowerOrEqualAverangeRate(float averangeRateOfAlbum){
-        return albumsRepository.findAlbumsWithLowerOrEqualAverangeRate(averangeRateOfAlbum);
+    public Iterable<Albums> getAlbumsWithLowerOrEqualAverageRate(float averageRateOfAlbum){
+        return albumsRepository.findAlbumsWithLowerOrEqualAverageRate(averageRateOfAlbum);
     }
 
     @Override
-    public Iterable<Albums> getAlbumsWithHigherOrEqualAverangeRate(float averangeRateOfAlbum){
-        return albumsRepository.findAlbumsWithHigherOrEqualAverangeRate(averangeRateOfAlbum);
+    public Iterable<Albums> getAlbumsWithHigherOrEqualAverageRate(float averageRateOfAlbum){
+        return albumsRepository.findAlbumsWithHigherOrEqualAverageRate(averageRateOfAlbum);
     }
 
     @Override

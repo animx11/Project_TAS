@@ -3,7 +3,7 @@ package Spring.Controllers;
 
 import Spring.Cipher.EncrypterAES;
 import Spring.Entities.Users;
-import Spring.Services.UsersService;
+import Spring.Services.UsersServices.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -48,13 +48,13 @@ public class UsersController {
             boolean isDomainCorrect = false;
 
             for(int i = 0; i < email.length; i++){
-                if(isAtInEmail == false) {
+                if(!isAtInEmail) {
                     if (email[i] == '@') {
                         isAtInEmail = true;
                     }
                 }
                 else{
-                    if(isDomainCorrect == false){
+                    if(!isDomainCorrect){
                         if(email[i] == '.'){
                             if(email.length - i > 4){
                                 i = email.length;
@@ -68,7 +68,7 @@ public class UsersController {
                 }
             }
 
-            if(isAtInEmail != true || isDomainCorrect != true) {
+            if(!isAtInEmail || !isDomainCorrect) {
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
 

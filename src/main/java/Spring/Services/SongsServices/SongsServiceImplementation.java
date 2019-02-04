@@ -1,4 +1,4 @@
-package Spring.Services;
+package Spring.Services.SongsServices;
 
 import Spring.Entities.Songs;
 import Spring.Repositories.SongsRepository;

@@ -1,7 +1,7 @@
 package Spring.Controllers;
 
 import Spring.Entities.Albums;
-import Spring.Services.AlbumsService;
+import Spring.Services.AlbumsServices.AlbumsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.awt.*;
 import java.util.Objects;
 
 @RestController
@@ -70,13 +69,13 @@ public class AlbumsController {
     }
 
     @RequestMapping(value = "/albums_LOEAverangeRate", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<Albums>  getAlbumsWithHLowerOrEqualAverangeRate(@RequestParam("averangeRateOfAlbum") float averangeRateOfAlbum){
-        return albumsService.getAlbumsWithLowerOrEqualAverangeRate(averangeRateOfAlbum);
+    public Iterable<Albums>  getAlbumsWithHLowerOrEqualAverangeRate(@RequestParam("averageRateOfAlbum") float averageRateOfAlbum){
+        return albumsService.getAlbumsWithLowerOrEqualAverageRate(averageRateOfAlbum);
     }
 
     @RequestMapping(value = "/albums_HOEAverangeRate", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<Albums>  getAlbumsWithHigherOrEqualAverangeRate(@RequestParam("averangeRateOfAlbum") float averangeRateOfAlbum){
-        return albumsService.getAlbumsWithHigherOrEqualAverangeRate(averangeRateOfAlbum);
+    public Iterable<Albums>  getAlbumsWithHigherOrEqualAverangeRate(@RequestParam("averageRateOfAlbum") float averageRateOfAlbum){
+        return albumsService.getAlbumsWithHigherOrEqualAverageRate(averageRateOfAlbum);
     }
 
 }

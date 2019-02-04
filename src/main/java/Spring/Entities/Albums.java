@@ -29,17 +29,17 @@ public class Albums {
     private int lengthOfAlbum;
 
     @Column(name = "Average_Rate_Of_Album")
-    private float averangeRateOfAlbum;
+    private float averageRateOfAlbum;
 
     //Constructors
 
     public Albums(){
     }
 
-    public Albums(String albumName, int lengthOfAlbum, float averangeRateOfAlbum) {
+    public Albums(String albumName, int lengthOfAlbum, float averageRateOfAlbum) {
         this.albumName = albumName;
         this.lengthOfAlbum = lengthOfAlbum;
-        this.averangeRateOfAlbum = averangeRateOfAlbum;
+        this.averageRateOfAlbum = averageRateOfAlbum;
     }
 
     //Getters and Setters
@@ -70,11 +70,11 @@ public class Albums {
     }
 
     public float getAverangeRateOfAlbum() {
-        return averangeRateOfAlbum;
+        return averageRateOfAlbum;
     }
 
-    public void setAverangeRateOfAlbum(float averangeRateOfAlbum) {
-        this.averangeRateOfAlbum = averangeRateOfAlbum;
+    public void setAverangeRateOfAlbum(float averageRateOfAlbum) {
+        this.averageRateOfAlbum = averageRateOfAlbum;
     }
 
     public void setSongs(List<Songs> songs) {

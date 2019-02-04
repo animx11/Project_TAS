@@ -1,4 +1,4 @@
-package Spring.Services;
+package Spring.Services.UsersServices;
 
 
 import Spring.Entities.Users;
