@@ -17,8 +17,8 @@ public class Musicians {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "Name")
-    private String name;
+    @Column(name = "First_Name")
+    private String firstName;
 
     @Column(name = "Last_name")
     private String lastName;
@@ -45,8 +45,8 @@ public class Musicians {
     public Musicians() {
     }
 
-    public Musicians(String name, String lastName, String pseudonym, Bands band, Date birthDate, String origin, String instrument, float averageRateOfAlbum) {
-        this.name = name;
+    public Musicians(String firstName, String lastName, String pseudonym, Bands band, Date birthDate, String origin, String instrument, float averageRateOfAlbum) {
+        this.firstName = firstName;
         this.lastName = lastName;
         this.pseudonym = pseudonym;
         this.band = band;
@@ -64,12 +64,12 @@ public class Musicians {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {

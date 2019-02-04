@@ -9,31 +9,31 @@ import org.springframework.stereotype.Service;
 public class SongsServiceImplementation implements SongsService {
 
     @Autowired
-    private SongsRepository SongsRepository;
+    private SongsRepository songsRepository;
 
     @Override
     public Songs getById(Integer id){
-        return SongsRepository.findOne(id);
+        return songsRepository.findOne(id);
     }
 
     @Override
     public Songs save(Songs song){
-        return SongsRepository.save(song);
+        return songsRepository.save(song);
     }
 
     @Override
     public void delete(Integer id){
-        SongsRepository.delete(id);
+        songsRepository.delete(id);
     }
 
     @Override
     public Iterable<Songs> listSongs(){
-        return SongsRepository.findAll();
+        return songsRepository.findAll();
     }
 
     @Override
     public Iterable<Songs> getBySongName(String songName){
-        return SongsRepository.findBySongName(songName);
+        return songsRepository.findBySongName(songName);
     }
 
 
