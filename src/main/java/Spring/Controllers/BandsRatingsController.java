@@ -1,6 +1,7 @@
 package Spring.Controllers;
 
 import Spring.Entities.BandsRatings;
+import Spring.Entities.Bands;
 import Spring.Services.BandsRatingsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,5 +32,9 @@ public class BandsRatingsController {
     public ResponseEntity<BandsRatings> delete(@PathVariable Integer id){
         bandsRatingsService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+    @RequestMapping(value = "/averangeBandRating", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<BandsRatings> averangeRating(@RequestParam("band") Bands band){
+        return bandsRatingsService.averangeRating(band);
     }
 }

@@ -1,6 +1,7 @@
 package Spring.Services;
 
 import Spring.Entities.BandsRatings;
+import Spring.Entities.Bands;
 import Spring.Repositories.BandsRatingsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,4 +21,7 @@ public class BandsRatingsServiceImplementation implements BandsRatingsService {
     public void delete(Integer id){
         BandsRatingsRepository.delete(id);
     }
+
+    @Override
+    public Iterable<BandsRatings> averangeRating(Bands band){ return BandsRatingsRepository.averangeRating(band);}
 }
