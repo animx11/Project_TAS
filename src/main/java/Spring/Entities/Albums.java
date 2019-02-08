@@ -2,6 +2,7 @@ package Spring.Entities;
 
 import javax.persistence.*;
 import java.util.List;
+import Spring.Entities.Bands;
 
 @Entity
 @Table(name = "Albums", uniqueConstraints = {
@@ -17,7 +18,7 @@ public class Albums {
     @Column(name = "Album_Name")
     private String albumName;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "Band", referencedColumnName = "id")
     private Bands band;
 
@@ -36,10 +37,11 @@ public class Albums {
     public Albums(){
     }
 
-    public Albums(String albumName, int lengthOfAlbum, float averangeRateOfAlbum) {
+    public Albums(String albumName, int lengthOfAlbum, float averangeRateOfAlbum, Bands band ) {
         this.albumName = albumName;
         this.lengthOfAlbum = lengthOfAlbum;
         this.averangeRateOfAlbum = averangeRateOfAlbum;
+        this.band = band;
     }
 
     //Getters and Setters

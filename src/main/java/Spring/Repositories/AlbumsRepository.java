@@ -9,18 +9,15 @@ public interface AlbumsRepository extends CrudRepository<Albums, Integer>, Pagin
 
     Albums findById(int id);
 
-    @Query("select a from Albums a where a.albumName like ?1")
+    @Query("SELECT a FROM Albums a WHERE a.albumName LIKE ?1")
     Iterable<Albums> findByAlbumName(String albumName);
 
-    @Query("select a from Albums a where a.averangeRateOfAlbum <= ?1")
+    @Query("SELECT a FROM Albums a ORDER BY a.averangeRateOfAlbum DESC")
+    Iterable<Albums> sortAlbumsByRating();
+
+    @Query("SELECT a FROM Albums a WHERE a.averangeRateOfAlbum <= ?1")
     Iterable<Albums> findAlbumsWithLowerOrEqualAverangeRate(float averangeRateOfAlbum);
 
-    @Query("select a from Albums a where a.averangeRateOfAlbum >= ?1")
+    @Query("SELECT a FROM Albums a WHERE a.averangeRateOfAlbum >= ?1")
     Iterable<Albums> findAlbumsWithHigherOrEqualAverangeRate(float averangeRateOfAlbum);
-    /*
-    @Query("select a from Albums a where a.Band like ?1")
-    Iterable<Albums> findByBandName(String bandName);
-    */
-
-
 }

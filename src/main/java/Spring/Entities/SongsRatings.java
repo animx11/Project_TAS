@@ -17,6 +17,10 @@ public class SongsRatings {
     @JoinColumn(name = "Songs", referencedColumnName = "id")
     private Bands song;
 
+    @OneToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "Users", referencedColumnName = "id")
+    private Users userName;
+
     @Column(name = "Rating")
     private int rating;
     public int getId() {
@@ -26,9 +30,10 @@ public class SongsRatings {
     public SongsRatings() {
     }
 
-    public SongsRatings(Bands songs, int rating) {
+    public SongsRatings(Bands songs, int rating, Users userName) {
         this.song = songs;
         this.rating = rating;
+        this.userName = userName;
     }
 
     public void setId(int id) {
@@ -38,6 +43,8 @@ public class SongsRatings {
     public Bands getSongs() {
         return song;
     }
+
+    public Users getUser() {return userName;}
 
     public void setSongs(Bands songs) {
         this.song = songs;

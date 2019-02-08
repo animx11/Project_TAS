@@ -28,9 +28,11 @@ public class AlbumsServiceImplementation implements AlbumsService {
 
 
     @Override
-    public Iterable<Albums> getByAlbumName(String albumName){
-        return albumsRepository.findByAlbumName(albumName);
+    public Iterable<Albums> getByAlbumName(String albumName){ return albumsRepository.findByAlbumName(albumName);
     }
+
+    @Override
+    public Iterable<Albums> sortAlbumsByRating() {return albumsRepository.sortAlbumsByRating();}
 
     @Override
     public Iterable<Albums> getAlbumsWithLowerOrEqualAverangeRate(float averangeRateOfAlbum){

@@ -65,6 +65,10 @@ public class AlbumsController {
         return albumsService.getByAlbumName(albumName);
     }
 
+    @RequestMapping(value = "/albums_by_rating", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<Albums> sortAlbumsByRating(){ return albumsService.sortAlbumsByRating();
+    }
+
     @RequestMapping(value = "/albums_LOEAverangeRate", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Albums>  getAlbumsWithHLowerOrEqualAverangeRate(@RequestParam("averangeRateOfAlbum") float averangeRateOfAlbum){
         return albumsService.getAlbumsWithLowerOrEqualAverangeRate(averangeRateOfAlbum);
@@ -74,5 +78,4 @@ public class AlbumsController {
     public Iterable<Albums>  getAlbumsWithHigherOrEqualAverangeRate(@RequestParam("averangeRateOfAlbum") float averangeRateOfAlbum){
         return albumsService.getAlbumsWithHigherOrEqualAverangeRate(averangeRateOfAlbum);
     }
-
 }
