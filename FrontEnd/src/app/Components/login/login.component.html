@@ -1,0 +1,11 @@
+<p *ngIf="!logged">
+
+	Login: <input type = "text" [(ngModel)]="loginName"><br>
+	Password: <input type = "text" [(ngModel)]="password"><br>
+	
+	<button (click)="login()">Zaloguj</button>
+
+</p>
+<p *ngIf="logged">
+	Zalogowano jako {{loggedUser.getUserName()}}
+</p>
