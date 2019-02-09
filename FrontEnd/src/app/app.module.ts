@@ -8,7 +8,9 @@ import { Observable } from 'rxjs/Observable';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Components/login/login.component';
 import { LoginService } from './Services/login.service';
-import { RejestracjaComponent } from './Components/rejestracja/rejestracja.component'
+import { BandService } from './Services/band.service';
+import { RejestracjaComponent } from './Components/rejestracja/rejestracja.component';
+import { AddBandComponent } from './Components/bands/add-band/add-band.component'
 
 const ROUTES: Routes = [
 	{path: 'login', component: LoginComponent},
@@ -18,7 +20,8 @@ const ROUTES: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    RejestracjaComponent
+    RejestracjaComponent,
+    AddBandComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ const ROUTES: Routes = [
 	HttpClientModule,
 	RouterModule.forRoot(ROUTES)
   ],
-  providers: [LoginService],
+  providers: [LoginService, BandService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

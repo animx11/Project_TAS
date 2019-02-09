@@ -8,20 +8,19 @@
 	<a routerLink = "login" routerLinkActive = "active" *ngIf="!logged">Zaloguj</a>
 	<a routerLink = "rejestracja" routerLinkActive = "active">Rejestracja</a>
 </div>
-
+	 <router-outlet></router-outlet>
+<br><br>
 <div (click)="isAdminPanelClicked=switchValue(isAdminPanelClicked)">Panel Administratorski</div>
 
 <div id = "adminPanel" *ngIf = "isAdminPanelClicked">
 	<div (click)="isAddBandClicked=switchValue(isAddBandClicked)">Dodaj Zespół</div>
 </div>
 <div *ngIf = "isAddBandClicked">
-	dodaj co?
-	<input type="text">
-
+	<app-add-band></app-add-band>
 </div>
 
 
- <router-outlet></router-outlet>
+
 </div>
 
 
