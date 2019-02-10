@@ -56,7 +56,7 @@ export class RejestracjaComponent implements OnInit {
 					else{
 						window.alert("Nie można połączyć się z serwerem");
 					}
-			}
+				}
 			);
 		}
 		else{

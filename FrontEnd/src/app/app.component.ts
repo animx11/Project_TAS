@@ -13,7 +13,7 @@ export class AppComponent {
   logged: boolean = false;
   isAdminPanelClicked: boolean = false;
   isAddBandClicked: boolean = false;
-  
+  isFindBandByNameClicked: boolean = false;
   
   isUserLogged(isLogged: boolean){
 	  this.logged = isLogged;

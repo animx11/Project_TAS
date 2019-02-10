@@ -14,9 +14,13 @@
 
 <div id = "adminPanel" *ngIf = "isAdminPanelClicked">
 	<div (click)="isAddBandClicked=switchValue(isAddBandClicked)">Dodaj Zespół</div>
+	<div (click)="isFindBandByNameClicked=switchValue(isFindBandByNameClicked)">Wyszukaj Zespół</div>
 </div>
 <div *ngIf = "isAddBandClicked">
 	<app-add-band></app-add-band>
+</div>
+<div *ngIf = "isFindBandByNameClicked">
+	<app-find-band-by-name></app-find-band-by-name>
 </div>
 
 

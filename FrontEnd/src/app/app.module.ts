@@ -10,7 +10,9 @@ import { LoginComponent } from './Components/login/login.component';
 import { LoginService } from './Services/login.service';
 import { BandService } from './Services/band.service';
 import { RejestracjaComponent } from './Components/rejestracja/rejestracja.component';
-import { AddBandComponent } from './Components/bands/add-band/add-band.component'
+import { AddBandComponent } from './Components/bands/add-band/add-band.component';
+import { FindBandByNameComponent } from './Components/bands/find-band-by-name/find-band-by-name.component';
+import { DeleteBandComponent } from './Components/bands/delete-band/delete-band.component'
 
 const ROUTES: Routes = [
 	{path: 'login', component: LoginComponent},
@@ -21,7 +23,9 @@ const ROUTES: Routes = [
     AppComponent,
     LoginComponent,
     RejestracjaComponent,
-    AddBandComponent
+    AddBandComponent,
+    FindBandByNameComponent,
+    DeleteBandComponent
   ],
   imports: [
     BrowserModule,
