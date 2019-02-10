@@ -50,8 +50,13 @@ public class BandsController {
     public ResponseEntity<Bands> edit(@RequestBody @Valid @NotNull Bands band){
         Bands editBand = bandsService.getById(band.getId());
         if(Objects.nonNull(editBand)){
-            bandsService.save(band);
-            return new ResponseEntity<>(HttpStatus.CREATED);
+            if (!bandsService.getByBandName(band.getBandName()).iterator().hasNext()) {
+                bandsService.save(band);
+                return new ResponseEntity<>(HttpStatus.CREATED);
+            }
+            else{
+                return new ResponseEntity<>(HttpStatus.CONFLICT);
+            }
         }
         else {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -60,7 +65,7 @@ public class BandsController {
 
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     @RequestMapping(value = "/bands", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Bands> delete(@PathVariable Integer id){
+    public ResponseEntity<Bands> delete(@RequestParam("id") Integer id){
         bandsService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }

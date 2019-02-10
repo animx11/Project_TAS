@@ -14,7 +14,7 @@ public class Bands {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "Name")
+    @Column(name = "Band_Name" , unique = true)
     private String bandName;
 
     @Column(name = "Year_of_creation")
