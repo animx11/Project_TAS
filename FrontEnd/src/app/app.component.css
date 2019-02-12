@@ -1,0 +1,35 @@
+.clicker{
+	
+	background-color: lightblue;
+	width: 150px;
+	height: 50px;
+	text-align: justify;
+  border-style: solid;
+  border-width: 1px;
+	
+}
+
+#side{
+	width: 25%;
+	height: 100%;
+	position: fixed;
+}
+
+#content{
+	
+	width: 75%;
+	height: 100%;
+	position: absolute;
+	left: 150px;
+}
+
+#admin{
+	
+	background-color: lightgrey;
+	width: 150px;
+	height: 50px;
+	text-align: justify;
+	  border-style: solid;
+  border-width: 1px;
+	
+}

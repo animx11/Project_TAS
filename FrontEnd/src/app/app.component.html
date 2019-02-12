@@ -7,22 +7,26 @@
 <div id = "Login">
 	<a routerLink = "login" routerLinkActive = "active" *ngIf="!logged">Zaloguj</a>
 	<a routerLink = "rejestracja" routerLinkActive = "active">Rejestracja</a>
+	<a href='http://localhost:4200/'>Powrót</a>
 </div>
 	 <router-outlet></router-outlet>
 <br><br>
-<div (click)="isAdminPanelClicked=switchValue(isAdminPanelClicked)">Panel Administratorski</div>
+<div>
+<div id='side'>
+<div id='admin' (click)="isAdminPanelClicked=switchValue(isAdminPanelClicked)">Panel Administratorski</div>
 
 	<div id = "adminPanel" *ngIf = "isAdminPanelClicked">
-		<div (click)="isAddBandClicked=switchValue(isAddBandClicked)">Dodaj Zespół</div>
-		<div (click)="isFindBandByNameClicked=switchValue(isFindBandByNameClicked)">Wyszukaj Zespół</div>
-		<div (click)="isAddAlbumClicked=switchValue(isAddAlbumClicked)">Dodaj Album</div>
-		<div (click)="isFindAlbumByNameClicked=switchValue(isFindAlbumByNameClicked)">Wyszukaj Album</div>
-		<div (click)="isAddMusicianClicked=switchValue(isAddMusicianClicked)">Dodaj artyste</div>
-		<div (click)="isFindMusicianByNameClicked=switchValue(isFindMusicianByNameClicked)">Wyszukaj artyste</div>
-		<div (click)="isAddSongClicked=switchValue(isAddSongClicked)">Dodaj piosenke</div>
-		<div (click)="isFindSongByNameClicked=switchValue(isFindSongByNameClicked)">Wyszukaj piosenke</div>
+		<div class="clicker" (click)="isAddBandClicked=switchValue(isAddBandClicked)">Dodaj Zespół</div>
+		<div class="clicker" (click)="isFindBandByNameClicked=switchValue(isFindBandByNameClicked)">Wyszukaj Zespół</div>
+		<div class="clicker" (click)="isAddAlbumClicked=switchValue(isAddAlbumClicked)">Dodaj Album</div>
+		<div class="clicker" (click)="isFindAlbumByNameClicked=switchValue(isFindAlbumByNameClicked)">Wyszukaj Album</div>
+		<div class="clicker" (click)="isAddMusicianClicked=switchValue(isAddMusicianClicked)">Dodaj artyste</div>
+		<div class="clicker" (click)="isFindMusicianByNameClicked=switchValue(isFindMusicianByNameClicked)">Wyszukaj artyste</div>
+		<div class="clicker" (click)="isAddSongClicked=switchValue(isAddSongClicked)">Dodaj piosenke</div>
+		<div class="clicker" (click)="isFindSongByNameClicked=switchValue(isFindSongByNameClicked)">Wyszukaj piosenke</div>
 	</div>
-
+</div>
+<div id='content'>
 <div *ngIf = "isAddBandClicked">
 	<app-add-band></app-add-band>
 </div>
