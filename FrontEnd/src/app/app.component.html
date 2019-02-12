@@ -12,10 +12,17 @@
 <br><br>
 <div (click)="isAdminPanelClicked=switchValue(isAdminPanelClicked)">Panel Administratorski</div>
 
-<div id = "adminPanel" *ngIf = "isAdminPanelClicked">
-	<div (click)="isAddBandClicked=switchValue(isAddBandClicked)">Dodaj Zespół</div>
-	<div (click)="isFindBandByNameClicked=switchValue(isFindBandByNameClicked)">Wyszukaj Zespół</div>
-</div>
+	<div id = "adminPanel" *ngIf = "isAdminPanelClicked">
+		<div (click)="isAddBandClicked=switchValue(isAddBandClicked)">Dodaj Zespół</div>
+		<div (click)="isFindBandByNameClicked=switchValue(isFindBandByNameClicked)">Wyszukaj Zespół</div>
+		<div (click)="isAddAlbumClicked=switchValue(isAddAlbumClicked)">Dodaj Album</div>
+		<div (click)="isFindAlbumByNameClicked=switchValue(isFindAlbumByNameClicked)">Wyszukaj Album</div>
+		<div (click)="isAddMusicianClicked=switchValue(isAddMusicianClicked)">Dodaj artyste</div>
+		<div (click)="isFindMusicianByNameClicked=switchValue(isFindMusicianByNameClicked)">Wyszukaj artyste</div>
+		<div (click)="isAddSongClicked=switchValue(isAddSongClicked)">Dodaj piosenke</div>
+		<div (click)="isFindSongByNameClicked=switchValue(isFindSongByNameClicked)">Wyszukaj piosenke</div>
+	</div>
+
 <div *ngIf = "isAddBandClicked">
 	<app-add-band></app-add-band>
 </div>
@@ -23,7 +30,27 @@
 	<app-find-band-by-name></app-find-band-by-name>
 </div>
 
+<div *ngIf = "isAddAlbumClicked">
+	<app-add-album></app-add-album>
+</div>
+<div *ngIf = "isFindAlbumByNameClicked">
+	<app-find-by-album-name></app-find-by-album-name>
+</div>
 
+
+<div *ngIf = "isAddMusicianClicked">
+	<app-add-musicians></app-add-musicians>
+</div>
+<div *ngIf = "isFindMusicianByNameClicked">
+	<app-find-by-album-name></app-find-by-album-name>
+</div>
+
+<div *ngIf = "isAddSongClicked">
+	<app-songs-add></app-songs-add>
+</div>
+<div *ngIf = "isFindSongByNameClicked">
+	<app-find-by-song-name></app-find-by-song-name>
+</div>
 
 </div>
 

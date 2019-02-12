@@ -1,0 +1,43 @@
+<p>
+	<input type = "text" [(ngModel)]="songName">
+  	<button (click)="findBySongName()">Wyszukaj</button>
+  	<button (click)="findAll(); searchedAll=switchValue(searchedAll)">Wyszukaj wszystkie albumy</button>
+</p>
+	<div *ngIf="searched">
+		<div *ngIf="songSearched.getSongName()!==''">
+			Nazwa: {{songSearched.getSongName()}}, Rok powstania: {{songSearched.getYearOfCreation()}}, Gatunek: {{songSearched.getGenre()}}
+			Długość: {{songSearched.getLengthOfSong()}}, Album: {{songSearched.getAlbums()}}, Zespół: {{songSearched.getBand()}}
+		</div>
+		<div *ngIf="songSearched.getSongName()==''">
+			Brak Wyników wyszukiwania
+		</div>
+	</div>
+	
+	<div *ngIf="searched">
+		<button (click)="deleteSong()">Usuń zespół</button>
+		<button (click)="edit=switchValue(edit)">Edytuj Zespół</button>
+	</div>
+	
+	<div *ngIf="edit">
+
+    Nazwa piosenki: <input type = "text" [(ngModel)]="editSongName"><br>
+	Rok utworzenia: <input type = "text" [(ngModel)]="yearOfCreation"><br>
+	Gatunek: <input type = "text" [(ngModel)]="genre"><br>
+	Długość: <input type = "text" [(ngModel)]="lengthOfSong"><br>
+	Zespół: <input type = "text" [(ngModel)]="bandName"><br>
+	Album: <input type = "text" [(ngModel)]="albumsName"><br>
+	<button (click)="editSong()">Dodaj album</button>
+	</div>
+	
+		
+	<div *ngIf="searchedAll">
+		
+		<div *ngFor="let songAll of songAll">
+			Nazwa: {{songAll.getSongName()}}, Rok powstania: {{songAll.getYearOfCreation()}}, Gatunek: {{songAll.getGenre()}}
+			Długość: {{songAll.getLengthOfSong()}}, Album: {{songAll.getAlbums()}}, Zespół: {{songAll.getBand()}}
+		</div>
+
+		<div *ngIf="songAll.length==0">
+			Brak wyników wyszukiwania
+		</div>
+	</div>

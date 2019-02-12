@@ -44,7 +44,7 @@ export class Bands{
 		this.origin = origin;
 	}
 	
-	getAverageRateOfBand(){
+	getAverageRateOfBand(): number{
 		return this.averageRateOfBand;
 	}
 	setAverageRateOfBand(averageRateOfBand: number){
