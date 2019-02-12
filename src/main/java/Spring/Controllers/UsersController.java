@@ -96,8 +96,8 @@ public class UsersController {
     }
 
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
-    @RequestMapping(value = "/users/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Users> delete(@PathVariable Integer id){
+    @RequestMapping(value = "/users`", method = RequestMethod.DELETE)
+    public ResponseEntity<Users> delete(@RequestParam("id") Integer id){
         usersService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }

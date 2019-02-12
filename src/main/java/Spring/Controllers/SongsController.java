@@ -62,7 +62,7 @@ public class SongsController {
 
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     @RequestMapping(value = "/songs", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Songs> delete(@PathVariable Integer id){
+    public ResponseEntity<Songs> delete(@RequestParam("id") Integer id){
         songsService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }

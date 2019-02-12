@@ -17,13 +17,11 @@ public class Albums {
     @Column(name = "Album_Name")
     private String albumName;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "Band", referencedColumnName = "id")
-    private Bands band;
+    @Column(name = "Band")
+    private String band;
 
-    @OneToMany(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "Songs", referencedColumnName = "id")
-    private List<Songs> songs;
+    @Column(name = "Songs")
+    private String songs;
 
     @Column(name = "Lenght_Of_Album")
     private int lengthOfAlbum;
@@ -36,9 +34,10 @@ public class Albums {
     public Albums(){
     }
 
-    public Albums(String albumName, int lengthOfAlbum, float averageRateOfAlbum) {
+    public Albums(String albumName, int lengthOfAlbum, String band, float averageRateOfAlbum) {
         this.albumName = albumName;
         this.lengthOfAlbum = lengthOfAlbum;
+        this.band = band;
         this.averageRateOfAlbum = averageRateOfAlbum;
     }
 
@@ -77,10 +76,18 @@ public class Albums {
         this.averageRateOfAlbum = averageRateOfAlbum;
     }
 
-    public void setSongs(List<Songs> songs) {
+    public void setSongs(String songs) {
         this.songs = songs;
     }
-    public List<Songs> getSongs(){
+    public String getSongs(){
         return songs;
+    }
+
+    public String getBand() {
+        return band;
+    }
+
+    public void setBand(String band) {
+        this.band = band;
     }
 }

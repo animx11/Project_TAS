@@ -28,19 +28,17 @@ public class Songs {
     @Column(name = "Averange_Rate_Of_Song")
     private float averangeRateOfSong;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "Albums", referencedColumnName = "id")
-    private Albums albums;
+    @Column(name = "Albums")
+    private String albums;
 
 
-    @OneToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "Band", referencedColumnName = "id")
-    private Bands band;
+    @Column(name = "Band")
+    private String band;
 
     public Songs() {
     }
 
-    public Songs(String songName, int yearOfCreation, String genre, int lengthOfSong, float averangeRateOfSong, Albums albums) {
+    public Songs(String songName, int yearOfCreation, String genre, int lengthOfSong, float averangeRateOfSong) {
         this.songName = songName;
         this.yearOfCreation = yearOfCreation;
         this.genre = genre;
@@ -97,11 +95,11 @@ public class Songs {
         this.averangeRateOfSong = averangeRateOfSong;
     }
 
-    public Albums getAlbums() {
+    public String getAlbums() {
         return albums;
     }
 
-    public void setAlbums(Albums albums) {
+    public void setAlbums(String albums) {
         this.albums = albums;
     }
 

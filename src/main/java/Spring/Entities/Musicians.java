@@ -26,9 +26,9 @@ public class Musicians {
     @Column(name = "Pseudonym")
     private String pseudonym;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "Band", referencedColumnName = "id")
-    private Bands band;
+
+    @Column(name = "Band")
+    private String band;
 
     @Column(name = "Birth_date")
     private Date birthDate;
@@ -45,7 +45,7 @@ public class Musicians {
     public Musicians() {
     }
 
-    public Musicians(String firstName, String lastName, String pseudonym, Bands band, Date birthDate, String origin, String instrument, float averageRateOfAlbum) {
+    public Musicians(String firstName, String lastName, String pseudonym, String band, Date birthDate, String origin, String instrument, float averageRateOfAlbum) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.pseudonym = pseudonym;
@@ -88,11 +88,11 @@ public class Musicians {
         this.pseudonym = pseudonym;
     }
 
-    public Bands getBand() {
+    public String getBand() {
         return band;
     }
 
-    public void setBand(Bands band) {
+    public void setBand(String band) {
         this.band = band;
     }
 

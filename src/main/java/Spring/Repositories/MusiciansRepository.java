@@ -19,7 +19,7 @@ public interface MusiciansRepository extends CrudRepository<Musicians, Integer>,
     @Query("select m from Musicians m where m.pseudonym like ?1")
     Iterable<Musicians> findMusiciansByPseudonym(String pseudonym);
 
-    @Query("select m from Musicians m where m.band.bandName like ?1")
+    @Query("select m from Musicians m where m.band like ?1")
     Iterable<Musicians> findMusiciansByBandName(String bandName);
 
 

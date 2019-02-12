@@ -60,7 +60,7 @@ public class AlbumsController {
 
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     @RequestMapping(value = "/albums", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Albums> delete(@PathVariable Integer id){
+    public ResponseEntity<Albums> delete(@RequestParam("id") Integer id){
         albumsService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
